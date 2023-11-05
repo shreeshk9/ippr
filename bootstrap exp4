@@ -1,0 +1,55 @@
+bootstrap 
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NAVIGATION BAR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topnav">
+    <a class="active">HOME</a>
+    <a>ABOUT</a>
+    <a>SERVICES</a>
+    <a>CONTACT US</a>
+  </div>
+</body>
+</html>
+
+
+css
+.topnav {
+    overflow: hidden;
+    background-image: url("space1.jpg");
+    min-height: 913px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f8f5f5;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 21px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #e1f411;
+    color: rgb(9, 9, 9);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #11e396;
+    color: white;
+  }
+  
