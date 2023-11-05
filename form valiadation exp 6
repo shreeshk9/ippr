@@ -1,0 +1,135 @@
+form validation using javascript
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LOGIN FORM</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <form id="registrationForm">
+    <h1>REGISTRATION FORM</h1>
+    <div class="a">
+      <label for="name">NAME:</label>
+      <input type="text" id="name">
+    </div>
+    <div class="b">
+      <label for="phone">PHONE NUMBER:</label>
+      <input type="text" id="phone">
+    </div>
+    <div class="c">
+      <label for="email">EMAIL:</label>
+      <input type="text" id="email">
+    </div>
+    <div class="d">
+      <label for="password">PASSWORD:</label>
+      <input type="password" id="password">
+    </div>
+    <div class="e">
+      <label for="language">DEPARTMENT</label>
+      <select name="language" id="language">
+        <option selected>select</option>
+        <option value="IT">IT</option>
+        <option value="COMP">COMP</option>
+        <option value="AIML">AIML</option>
+        <option value="AIDS">AIDS</option>
+      </select>
+    </div>
+    <div class="f">
+      <label>GENDER</label>
+      <input type="radio" id="MALE" name="GENDER" value="MALE">
+      <label for="MALE">MALE</label>
+      <input type="radio" id="FEMALE" name="GENDER" value="FEMALE">
+      <label for="FEMALE">FEMALE</label>
+    </div>
+    <div class="g">
+      <label>AREA OF INTEREST:-</label>
+      <input type="checkbox" id="programming">
+      <label for="programming">PROGRAMMING</label><br>
+      <input type="checkbox" id="logistic">
+      <label for="logistic">LOGISTIC</label><br>
+      <input type checkbox" id="marketing">
+      <label for="marketing">MARKETING</label><br>
+      <input type="checkbox" id="data_analyst">
+      <label for="data_analyst">DATA ANALYST</label><br>
+    </div>
+    <div class="h">
+      <button type="button" onclick="validateForm()">SUBMIT FORM</button>
+      <button type="button" onclick="resetForm()">RESET</button>
+    </div>
+  </form>
+  <script src="form.js"></script>
+</body>
+</html>
+
+css
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .event-container {
+    margin: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+
+js
+const mouseOverButton = document.getElementById("mouseOverButton");
+const mouseOutButton = document.getElementById("mouseOutButton");
+const mouseEventText = document.getElementById("mouseEventText");
+
+mouseOverButton.addEventListener("mouseover", () => {
+  mouseEventText.textContent = "Mouse is over the 'Mouse Over' button!";
+});
+
+mouseOutButton.addEventListener("mouseout", () => {
+  mouseEventText.textContent = "Mouse is not over any button.";
+});
+
+const keyboardInput = document.getElementById("keyboardInput");
+const keyboardEventText = document.getElementById("keyboardEventText");
+
+keyboardInput.addEventListener("keydown", (event) => {
+  keyboardEventText.textContent = `Key pressed: ${event.key}, Key code: ${event.keyCode}`;
+});
+
+const windowEventText = document.getElementById("windowEventText");
+
+window.addEventListener("resize", () => {
+  windowEventText.textContent = "Window has been resized!";
+});
+
+const demoForm = document.getElementById("demoForm");
+const formEventText = document.getElementById("formEventText");
+
+demoForm.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent form submission
+  formEventText.textContent = "Form submitted!";
+});
+
+const clickEventButton = document.getElementById("clickEventButton");
+const clickEventText = document.getElementById("clickEventText");
+
+clickEventButton.addEventListener("click", () => {
+  clickEventText.textContent = "Button has been clicked!";
+});
+
+const focusEventInput = document.getElementById("focusEventInput");
+const focusEventText = document.getElementById("focusEventText");
+
+focusEventInput.addEventListener("focus", () => {
+  focusEventText.textContent = "Input field is focused!";
+});
+
+focusEventInput.addEventListener("blur", () => {
+  focusEventText.textContent = "Input field is no longer focused.";
+});
