@@ -1,0 +1,45 @@
+register page
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>REGISTRATION FORM</title>
+  <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+  <h1>REGISTRATION FORM</h1>
+  <div class="a">
+    <label>NAME</label>
+    <input type="text" name="your-name">
+  </div>
+  <div class="b">
+    <label>ROLL_NO</label>
+    <input type="text" name="your-roll-no">
+  </div>
+  <div class="c">
+    <label>USERNAME</label>
+    <input type="text" name="username">
+  </div>
+  <div class="c">
+    <label>PASSWORD</label>
+    <input type="password" name="password">
+  </div>
+  <div class="d">
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+</body>
+</html>
+
+css
+body {
+  text-align: center;
+  background-color: chocolate;
+  margin: auto;
+}
+
+.a, .b, .c, .d {
+  margin-top: 50px;
+}
+
+
