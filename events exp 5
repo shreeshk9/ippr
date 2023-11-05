@@ -1,1 +1,127 @@
-e
+events using javascript
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="eve.css">
+    <title>Event Demonstration</title>
+ 
+</head>
+<body>
+  <h1>Event Demonstration</h1>
+  
+  <div class="event-container">
+    <h2>Mouse Events</h2>
+    <button id="mouseOverButton">Mouse Over</button>
+    <button id="mouseOutButton">Mouse Out</button>
+    <p id="mouseEventText">Mouse event will appear here.</p>
+  </div>
+
+  <div class="event-container">
+    <h2>Keyboard Events</h2>
+    <p>Type something in the input field below:</p>
+    <input type="text" id="keyboardInput">
+    <p id="keyboardEventText">Keyboard event will appear here.</p>
+  </div>
+
+  <div class="event-container">
+    <h2>Window Events</h2>
+    <p>Resize the window to see the event:</p>
+    <p id="windowEventText">Window event will appear here.</p>
+    IT Department SIESGST IP LAB
+  </div>
+
+  <div class="event-container">
+    <h2>Form Events</h2>
+    <form id="demoForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required><br><br>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formEventText">Form event will appear here.</p>
+  </div>
+
+  <div class="event-container">
+    <h2>Additional Events</h2>
+    <button id="clickEventButton">Click Me</button>
+    <p id="clickEventText">Click event will appear here.</p>
+    <input type="text" id="focusEventInput" placeholder="Focus me">
+    <p id="focusEventText">Focus event will appear here.</p>
+  </div>
+
+  <script src="event.js"></script>  
+</body>
+</html>
+
+
+css
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  .event-container {
+    margin: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+js
+const mouseOverButton = document.getElementById("mouseOverButton");
+const mouseOutButton = document.getElementById("mouseOutButton");
+const mouseEventText = document.getElementById("mouseEventText");
+
+mouseOverButton.addEventListener("mouseover", () => {
+  mouseEventText.textContent = "Mouse is over the 'Mouse Over' button!";
+});
+
+mouseOutButton.addEventListener("mouseout", () => {
+  mouseEventText.textContent = "Mouse is not over any button.";
+});
+
+const keyboardInput = document.getElementById("keyboardInput");
+const keyboardEventText = document.getElementById("keyboardEventText");
+
+keyboardInput.addEventListener("keydown", (event) => {
+  keyboardEventText.textContent = `Key pressed: ${event.key}, Key code: ${event.keyCode}`;
+});
+
+const windowEventText = document.getElementById("windowEventText");
+
+window.addEventListener("resize", () => {
+  windowEventText.textContent = "Window has been resized!";
+});
+
+const demoForm = document.getElementById("demoForm");
+const formEventText = document.getElementById("formEventText");
+
+demoForm.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent form submission
+  formEventText.textContent = "Form submitted!";
+});
+
+const clickEventButton = document.getElementById("clickEventButton");
+const clickEventText = document.getElementById("clickEventText");
+
+clickEventButton.addEventListener("click", () => {
+  clickEventText.textContent = "Button has been clicked!";
+});
+
+const focusEventInput = document.getElementById("focusEventInput");
+const focusEventText = document.getElementById("focusEventText");
+
+focusEventInput.addEventListener("focus", () => {
+  focusEventText.textContent = "Input field is focused!";
+});
+
+focusEventInput.addEventListener("blur", () => {
+  focusEventText.textContent = "Input field is no longer focused.";
+});
