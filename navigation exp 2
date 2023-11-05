@@ -1,0 +1,75 @@
+navigation bar
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NAVBAR</title>
+  <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#">Java</a></li>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+  </ul>
+</body>
+</html>
+
+css
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightgray;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .active {
+    background-color: gray;
+    color: white;
+  }
+  
+  li a:hover {
+    background-color: orange;
+    color: white;
+  }
+  
+  /* Additional styles */
+  .IT-DEPARTMENT {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .SIES-GST {
+    font-style: italic;
+  }
+  
+  .Internet-Programming-LAB {
+    text-align: center;
+  }
+  
+  .Aabhas-Janbandhu {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .Nine {
+    font-size: 9px;
+  }
+  
