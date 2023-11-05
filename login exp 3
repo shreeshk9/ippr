@@ -1,0 +1,135 @@
+login page
+
+html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LOGIN FORM</title>
+  <link rel="stylesheet" href="log.css">
+</head>
+<body>
+  <form>
+    <div class="container">
+      <center><h1>STUDENT LOGIN</h1></center>
+      <hr>
+      <label for="name">NAME</label>
+      <input type="text" id="name" placeholder="ENTER NAME"><br>
+      
+      <label for="rollNo">ROLL NO</label>
+      <input type="text" id="rollNo" placeholder="ENTER ROLL NO"><br>
+      
+      <label for="username">USERNAME</label>
+      <input type="text" id="username" placeholder="ENTER USERNAME"><br>
+      
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" placeholder="ENTER PASSWORD"><br>
+      
+      <div>
+        <label>DEPARTMENT</label>
+        <select id="department">
+          <option value="select" selected>SELECT</option>
+          <option value="IT">IT</option>
+          <option value="COMP">COMP</option>
+          <option value="AIDS">AIDS</option>
+          <option value="AIML">AIML</option>
+          <option value="ELEC">ELEC</option>
+          <option value="EXTC">EXTC</option>
+        </select>
+      </div>
+      
+      <div>
+        <label>
+          IT DEPARTMENT               SIES GST
+          Internet Programming LAB222A3064
+          Aabhas Janbandhu   12
+          Gender :
+        </label>
+        <input type="radio" value="Male" name="gender" checked> Male
+        <input type="radio" value="Female" name="gender"> Female
+        <input type="radio" value="Other" name="gender"> Other
+      </div>
+      
+      <div>
+        <label>AREA OF INTEREST</label>
+        <input type="checkbox" value="programming"> PROGRAMMING
+        <input type="checkbox" value="logistics"> LOGISTICS
+        <input type="checkbox" value="marketing"> MARKETING
+        <input type="checkbox" value="data_analyst"> DATA ANALYST
+      </div>
+      
+      <div>
+        <button type="submit" class="loginbtn">LOGIN</button>
+        <button type="reset" class="resetbtn">RESET</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
+
+css
+body {
+    text-align: center;
+    font-family: Calibri, Helvetica, sans-serif;
+    background-color: lightblue;
+  }
+  
+  .container {
+    padding: 50px;
+    background-color: lightblue;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    margin-top: 20px;
+    display: inline-block;
+    border: none;
+    background: white;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    background-color: lightgreen;
+    outline: none;
+  }
+  
+  div {
+    padding: 10px 0;
+  }
+  
+  hr {
+    border: 5px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  .loginbtn {
+    background-color: red;
+    color: black;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  .loginbtn:hover {
+    opacity: 1;
+  }
+  
+  .resetbtn {
+    background-color: green;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  .resetbtn:hover {
+    opacity: 1;
+  }
+  
