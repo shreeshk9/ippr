@@ -1,0 +1,44 @@
+// const fs = require('fs');
+// const path = require('path');
+// const dirpath = path.join(__dirname,'dir');
+// const filepath = path.join(dirpath,'sample.txt');
+// if(!fs.existsSync(dirpath)){
+//     fs.mkdirSync(dirpath);
+// }
+// fs.writeFileSync(filepath,"This is sample.txt created");
+
+// fs.readFile(filepath,'utf-8',(err,data)=>{
+//     if(err){
+//         console.error(err);
+//     }
+//     else{
+//         console.log(data);
+//     }
+// });
+
+// fs.appendFile(filepath, "to read and append something" , (err)=>{
+//     if(err){
+//         console.error(err)
+//     }
+//     else{
+//         console.log("file appended");
+//     }
+// })
+
+// fs.rename(filepath, path.join(dirpath,'exp.txt'),(err)=>{
+//     if(err){
+//         console.error(err)
+//     }
+//     else{
+//         console.log("renamed successfully");
+//     }
+// } )
+
+// fs.unlink(path.join(dirpath, 'exp.txt'),(err)=>{
+//     if(err){
+//         console.error(err)
+//     }
+//     else{
+//         console.log("exp.txt file is deleted");
+// }
+// })
