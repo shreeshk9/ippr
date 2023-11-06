@@ -65,71 +65,139 @@ html
 </html>
 
 css
+/* Reset some default styles for the body */
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border: 250px solid transparent; /* Add your border styles */
     text-align: center;
   }
-
-  .event-container {
-    margin: 20px;
+  
+  /* Apply styles to elements with class 'a' */
+  .a {
+    margin-top: 50px;
+    /* Add more styles as needed */
   }
-
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  
+  /* Apply styles to 'h1' elements */
+  h1 {
+    margin-top: 50px;
+    /* Add more styles as needed */
   }
+  
+  /* Apply styles to elements with class 'b' */
+  .b {
+    margin-top: 50px;
+    /* Add more styles as needed */
+  }
+  
+  /* Apply styles to elements with class 'c' */
+  .c {
+    margin-top: 50px;
+    /* Add more styles as needed */
+  }
+  
+  /* Apply styles to elements with class 'd' */
+  .d {
+    margin-top: 50px;
+    /* Add more styles as needed */
+  }
+  
+  /* Apply styles to elements with class 'e' */
+  .e {
+    margin-top: 50px;
+    /* Add more styles as needed */
+  }
+  
+  /* Apply styles to elements with class 'f' */
+  .f {
+    margin-top: 50px;
+    /* Add more styles as needed */
+  }
+  
+  /* Apply styles to elements with class 'g' */
+  .g {
+    margin-top: 50px;
+    /* Add more styles as needed */
+  }
+  
+  /* Apply styles to elements with class 'h' */
+  .h {
+    margin-top: 50px;
+    padding-right: 10px;
+    /* Add more styles as needed */
+  }
+  
 
 
 
 js
-const mouseOverButton = document.getElementById("mouseOverButton");
-const mouseOutButton = document.getElementById("mouseOutButton");
-const mouseEventText = document.getElementById("mouseEventText");
+// Add event listener to the button for form validation
+document.querySelector("button[type='button']").addEventListener("click", validateForm);
 
-mouseOverButton.addEventListener("mouseover", () => {
-  mouseEventText.textContent = "Mouse is over the 'Mouse Over' button!";
-});
+// Function to validate the form
+function validateForm() {
+  // Get form input values
+  var name = document.querySelector(".a input").value;
+  var phone = document.querySelector(".b input").value;
+  var email = document.querySelector(".c input").value;
+  var password = document.querySelector(".d input").value;
+  var department = document.getElementById("language").value;
+  var gender = document.querySelector("input[name='GENDER']:checked");
+  var interests = document.querySelectorAll(".g input:checked");
 
-mouseOutButton.addEventListener("mouseout", () => {
-  mouseEventText.textContent = "Mouse is not over any button.";
-});
+  // Check if the name field is empty
+  if (name === "") {
+    alert("Please enter your name.");
+    return;
+  }
 
-const keyboardInput = document.getElementById("keyboardInput");
-const keyboardEventText = document.getElementById("keyboardEventText");
+  // Validate phone number (must be digits and not empty)
+  if (!/^\d+$/.test(phone) || phone === "") {
+    alert("Please enter a valid phone number.");
+    return;
+  }
 
-keyboardInput.addEventListener("keydown", (event) => {
-  keyboardEventText.textContent = `Key pressed: ${event.key}, Key code: ${event.keyCode}`;
-});
+  // Simple validation for email (email format)
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
 
-const windowEventText = document.getElementById("windowEventText");
+  // Simple validation for password (non-empty)
+  if (password === "") {
+    alert("Please enter a password.");
+    return;
+  }
 
-window.addEventListener("resize", () => {
-  windowEventText.textContent = "Window has been resized!";
-});
+  // Validation for department (must select an option)
+  if (department === "select") {
+    alert("Please select a department.");
+    return;
+  }
 
-const demoForm = document.getElementById("demoForm");
-const formEventText = document.getElementById("formEventText");
+  // Validation for gender (at least one option must be checked)
+  if (!gender) {
+    alert("Please select your gender.");
+    return;
+  }
 
-demoForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevent form submission
-  formEventText.textContent = "Form submitted!";
-});
+  // Validation for interests (at least one checkbox must be checked)
+  if (interests.length === 0) {
+    alert("Please select at least one area of interest.");
+    return;
+  }
 
-const clickEventButton = document.getElementById("clickEventButton");
-const clickEventText = document.getElementById("clickEventText");
+  // If all validations pass, you can submit the form or perform other actions
+  alert("Form submitted successfully!");
+}
 
-clickEventButton.addEventListener("click", () => {
-  clickEventText.textContent = "Button has been clicked!";
-});
-
-const focusEventInput = document.getElementById("focusEventInput");
-const focusEventText = document.getElementById("focusEventText");
-
-focusEventInput.addEventListener("focus", () => {
-  focusEventText.textContent = "Input field is focused!";
-});
-
-focusEventInput.addEventListener("blur", () => {
-  focusEventText.textContent = "Input field is no longer focused.";
-});
+// Function to reset the form
+function reset() {
+  // Get a reference to the form element
+  var form = document.getElementById("registrationForm");
+  // Reset the form
+  form.reset();
+}
