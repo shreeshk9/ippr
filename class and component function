@@ -1,0 +1,79 @@
+App.js:-
+import './App.css';
+import Function from './Component/Function';
+import Class1 from './Component/Class';
+
+function App(){
+  return(
+    <div className="App">
+      <Function/>
+      <Class1/>
+      <header className="App-header">
+        <h1>IPL Practical Exam - PRN</h1>
+      </header>
+    </div>
+  ); 
+}
+export default App;
+
+App.css:-
+.App {
+  text-align: left;
+  background-color: #282c34;
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+--- create a folder in src and name it "Component" in that create 2 files naming Class.js and Function.js ----
+
+Class.js:-
+import React, { Component } from "react";
+class Class1 extends Component{
+    render() {
+        return(
+            <div>
+                <p><h1>
+                    This is class Component
+                    </h1></p>
+                    <br></br>
+                    <ul>
+                        <li>X</li>
+                        <li>Y</li>
+                        <li>Z</li>
+                    </ul>
+            </div>
+        );
+    }
+}
+export default Class1;
+
+Function.js:-
+import React from "react";
+function Function(){
+    return(
+        <div>
+        <p><h1>
+            This is function component.
+            </h1></p>
+            <br></br>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+            </ul>
+        </div>
+    );
+}
+export default Function;
